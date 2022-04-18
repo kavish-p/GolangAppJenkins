@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/java/maven:8u192-zulu-debian9 AS build-env
+FROM golang:latest 
+RUN mkdir /app 
+ADD . /app/ 
 WORKDIR /app
-COPY . /app
-RUN mvn package
- 
-FROM tomcat:8
-RUN rm -rf /usr/local/tomcat/webapps/ROOT
-COPY --from=build-env /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
+RUN go get -d
+RUN go build -o main . 
+CMD ["/app/main"]
+EXPOSE 80

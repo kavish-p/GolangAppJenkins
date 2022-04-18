@@ -1,11 +1,10 @@
-| Language | Framework | Platform | Author |
-| -------- | -------- |--------|--------|
-| Java | Spring | Azure Web App, Virtual Machine| |
+| Language | Platform | Author |
+| -------- | --------|--------|
+| Go Lang |  Azure Web App, Virtual Machine, AKS| |
 
+# Sample Go web application
 
-# Java Spring boot web application
-
-Sample Java Spring Boot web application that you can use to deploy on Azure.
+This is a sample GO Lang web application that you can deploy to Azure.
 
 
 ## License:
