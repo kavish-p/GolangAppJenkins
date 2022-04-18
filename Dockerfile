@@ -1,5 +1,6 @@
 FROM golang:latest 
-RUN mkdir /app 
+RUN mkdir /app
+RUN chmod 777 /app
 ADD . /app/ 
 WORKDIR /app
 RUN go get -d
