@@ -1,26 +1,17 @@
-# go-docker-example
+| Language | Platform | Author |
+| -------- | --------|--------|
+| Go Lang |  Azure Web App, Virtual Machine, AKS| |
 
-[![Build Status](https://travis-ci.org/fterrag/go-docker-example.svg?branch=master)](https://travis-ci.org/fterrag/go-docker-example) [![Coverage Status](https://coveralls.io/repos/github/fterrag/go-docker-example/badge.svg?branch=master)](https://coveralls.io/github/fterrag/go-docker-example?branch=master)
+# Sample Go web application
 
-A small example of building and running a Go app inside of a Docker container.
+This is a sample GO Lang web application that you can deploy to Azure.
 
-- Uses Go Modules
-- Runs `go test` during build
-- Uses Docker's multi-stage builds
-- Builds and runs (as an example) on Travis CI
-- Uses Coveralls for test coverage history
 
-## Running Locally
+## License:
 
-Be sure to have Go 1.12+ installed and try running:
+See [LICENSE](LICENSE).
 
-```bash
-$ go run cmd/example/main.go
-```
+## Contributing
 
-## Coveralls
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-When running builds under your own Travis CI account (or any CI service), the
-[travis.sh](/travis.sh) file requires the `COVERALLS_TOKEN` variable to be set to your [Coveralls](https://coveralls.io/) repo token. In Travis CI, you can set this variable
-in your project's settings under the Environment Variables section. If you do not
-want to use Coveralls, you may safely remove lines 10-12 in Dockerfile and line 7 in travis.sh.

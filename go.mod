@@ -1,13 +1,9 @@
-module github.com/fterrag/go-docker-example
+module testapp
 
-go 1.12
+go 1.18
 
 require (
-	github.com/davecgh/go-spew v1.1.0 // indirect
-	github.com/fatih/color v1.6.0
-	github.com/mattn/go-colorable v0.0.9 // indirect
-	github.com/mattn/go-isatty v0.0.3 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/testify v1.2.2
-	golang.org/x/sys v0.0.0-20180419222023-a2a45943ae67 // indirect
+	code.cloudfoundry.org/clock v0.0.0-20180518195852-02e53af36e6c // indirect
+	github.com/gofrs/uuid v3.3.0+incompatible // indirect
+	github.com/microsoft/ApplicationInsights-Go v0.4.4 // indirect
 )
