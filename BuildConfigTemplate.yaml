@@ -1,0 +1,19 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: "golang-app-build-${VERSION}" 
+spec:
+  runPolicy: "Serial"
+  source: 
+    git:
+      uri: "https://github.com/kavish-p/GolangAppJenkins.git"
+  strategy:
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  output: 
+    to:
+      kind: "DockerImage"
+      name: "10.168.0.76:9000/dev-registry/golang-app:${VERSION}"
+    pushSecret:
+      name: "nexus-secret"
+      
