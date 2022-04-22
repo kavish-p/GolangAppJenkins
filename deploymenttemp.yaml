@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: go-test2
-  name: go-test2
+    app: go-test-${version}
+  name: go-test-${version}
 spec:
   replicas: 1
   selector:
