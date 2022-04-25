@@ -33,8 +33,10 @@ pipeline {
                 echoBanner("Generate Version Number", ["Generating semantic version number"])
                 
                 container('oc') {
-                    echo "hello"
-                    sh 'sleep infinity'
+                    script {
+                        VERSION = sh(returnStdout: true, script: 'gitversion | jq ".SemVer"').trim()
+                    }
+                    sh "echo ${VERSION}"
                 }
             }
         }
