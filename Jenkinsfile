@@ -34,7 +34,7 @@ pipeline {
                 
                 container('oc') {
                     echo "hello"
-                    sleep infinity
+                    sh 'sleep infinity'
                 }
             }
         }
