@@ -12,6 +12,9 @@ spec:
       app: golang-app
   template:
     metadata:
+      labels:
+        app: golang-app
+        version: ${VERSION}
     spec:
       containers:
       - image: 10.168.0.76:9000/dev-registry/golang-app:${VERSION}
