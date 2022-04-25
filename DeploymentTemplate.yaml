@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: golang-app
+    version: ${VERSION}
   name: golang-app
 spec:
   replicas: 1
