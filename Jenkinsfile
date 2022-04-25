@@ -33,11 +33,8 @@ pipeline {
                 echoBanner("Generate Version Number", ["Generating semantic version number"])
                 
                 container('oc') {
-                    git url: 'https://github.com/kavish-p/GolangAppJenkins.git', branch: 'develop', credentialsId: 'github-kavish'
-                    script {
-                        VERSION = sh(returnStdout: true, script: 'gitversion | jq ".SemVer"').trim()
-                    }
-                    sh "echo ${VERSION}"
+                    echo "hello"
+                    sleep infinity
                 }
             }
         }
