@@ -31,7 +31,6 @@ pipeline {
         stage('Generate Version Number') {
             steps {
                 echoBanner("Generate Version Number", ["Generating semantic version number"])
-                
                 container('oc') {
                     script {
                         VERSION = sh(returnStdout: true, script: 'gitversion | jq ".SemVer"').trim()
@@ -40,6 +39,31 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy to DEV') {
+            when {
+                branch 'develop'  
+            }
+            steps {
+                echoBanner("Deploy to DEV", ["Deploy to DEV"])
+                container('oc') {
+                    echo "This is simulating deployment to DEV"
+                }
+            }
+        }
+
+        stage('Deploy to PROD') {
+            when {
+                branch 'master'  
+            }
+            steps {
+                echoBanner("Deploy to PROD", ["Deploy to PROD"])
+                container('oc') {
+                    echo "This is simulating deployment to PROD"
+                }
+            }
+        }
+        
     }
 }
 
